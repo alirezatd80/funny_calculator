@@ -76,4 +76,7 @@ def is_num(string):
         return True
     except ValueError:
         return False
+
+def help_fun():
+    print("a+b(sum) , a-b(minus) , a*b(multi) , a/b(divide) , \na%b(mod) ,a^b(power) , a!(fact) , a#(sqr)\nctrl+c or ctrl+z for exit")
         
