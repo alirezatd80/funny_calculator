@@ -9,43 +9,44 @@ def main():
                 nums , operation = input_user('input : ')
                 match(operation):
                     case '+':
-                        print(f'output => {int(nums[0])} + {int(nums[1])} = {sum(int(nums[0]) , int(nums[1]))}')
+                        print(f'output => {float(nums[0])} + {float(nums[1])} = {sum(float(nums[0]) , float(nums[1]))}')
                     case "-":
-                        print(f'output => {int(nums[0])} - {int(nums[1])} = {minus(int(nums[0]),int(nums[1]))}')
+                        print(f'output => {float(nums[0])} - {float(nums[1])} = {minus(float(nums[0]),float(nums[1]))}')
                     case "*":
-                        print(f'output => {int(nums[0])} * {int(nums[1])} = {multi(int(nums[0]),int(nums[1]))}')
+                        print(f'output => {float(nums[0])} * {float(nums[1])} = {multi(float(nums[0]),float(nums[1]))}')
                     case "/":
                         try:
-                            print(f'output => {int(nums[0])} / {int(nums[1])}={divide(int(nums[0]),int(nums[1]))}')
+                            print(f'output => {float(nums[0])} / {float(nums[1])}={divide(float(nums[0]),float(nums[1]))}')
                         except :
                             print("error num2 cant be zero")
                     case "^":
                         try:
-                            print(f'output => {int(nums[0])} * {int(nums[1])} = {power(int(nums[0]),int(nums[1]))}')
+                            print(f'output => {float(nums[0])} * {float(nums[1])} = {power(float(nums[0]),float(nums[1]))}')
                         except:
                             print('nums cant be zero')
                     case "%":
                         try:
-                            print(f'output => {int(nums[0])} % {int(nums[1])} = {mod(int(nums[0]),int(nums[1]))}')
+                            print(f'output => {float(nums[0])} % {float(nums[1])} = {mod(float(nums[0]),float(nums[1]))}')
                         except :
                             print("error num2 cant be zero")
                     case "!":
                         try:
-                            if is_num(int(nums[0])):
-                                print(f'output => {int(nums[0])}! = {fact(int(nums[0]))}')
+                            if is_num((nums[0])):
+                                print(f'output => {float(nums[0])}! = {fact(float(nums[0]))}')
                             else:
-                                print(f'output => {int(nums[1])}! = {fact(int(nums[1]))}')
+                                print(f'output => {float(nums[1])}! = {fact(float(nums[1]))}')
                         except:
                             print('cant be correct')
 
                     case "#":
+                        
                         try:
-                            if is_num(int(nums[0])):
-                                print(f'output => {int(nums[0])}# = {sqr(int(nums[0]))}')
+                            if is_num(nums[0]):
+                                print(f'output => {float(nums[0])}# = {sqr(float(nums[0]))}')
                             else:
-                                print(f'output => {int(nums[1])}# = {sqr(int(nums[1]))}')
-                        except:
-                            print("can't be nagative num")
+                                print(f'output => {float(nums[1])}# = {sqr(float(nums[1]))}')
+                        except e:
+                            print(f"can't be nagative num {e}")
                     case _ :
                         print(f'output => sorry')
             except :
