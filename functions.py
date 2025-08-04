@@ -21,7 +21,7 @@ def mod(num1 , num2):
 def power(num1 , num2):
     if num1 == num2 == 0:
         raise Exception("can't num1 and num2 be zero together")
-    return num1^num2
+    return num1**num2
 
 def fact(num):
     if num == 0 or num == 1 :
@@ -30,8 +30,10 @@ def fact(num):
 
 def sqr(num):
     if num >= 0 :
-        return num ^(0.5)
+        return (num**(0.5))
+        
     else:
+        
         return Exception("can't sqr for nagetive number !!! ")
     
 def input_user(message):
